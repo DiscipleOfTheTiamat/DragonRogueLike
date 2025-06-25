@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\my visual studio projects\\unreal engine game\\github\\adventuregame\\adventuregame\\intermediate\\build\\win64\\unrealeditor\\inc\\adventuregame\\uht\\adventuregame.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\my visual studio projects\\unreal engine game\\github\\adventuregame\\adventuregame\\intermediate\\build\\win64\\x64\\adventuregameeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\my visual studio projects\\unreal engine game\\github\\adventuregame\\adventuregame\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\adventuregame\\definitions.adventuregame.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

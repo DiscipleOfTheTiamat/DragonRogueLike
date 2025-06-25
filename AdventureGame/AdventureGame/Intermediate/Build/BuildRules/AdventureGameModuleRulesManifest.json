@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\My Visual Studio Projects\\Unreal Engine Game\\Github\\AdventureGame\\AdventureGame\\Source\\AdventureGame\\AdventureGame.Build.cs",
+		"C:\\My Visual Studio Projects\\Unreal Engine Game\\Github\\AdventureGame\\AdventureGame\\Source\\AdventureGame.Target.cs",
+		"C:\\My Visual Studio Projects\\Unreal Engine Game\\Github\\AdventureGame\\AdventureGame\\Source\\AdventureGameEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}
