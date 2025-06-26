@@ -1,4 +1,5 @@
 /I "."
+/I "C:\My Visual Studio Projects\Unreal Engine Game\Github\AdventureGame\AdventureGame\Source\AdventureGame\Private"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT"
 /I "Runtime\Engine\Classes"
 /I "Runtime\Engine\Public"
@@ -287,6 +288,7 @@
 /I "Editor\AnimationEditMode\Public"
 /I "C:\My Visual Studio Projects\Unreal Engine Game\Github\AdventureGame\AdventureGame\Intermediate\Build\Win64\UnrealEditor\Inc\AdventureGame\UHT"
 /I "C:\My Visual Studio Projects\Unreal Engine Game\Github\AdventureGame\AdventureGame\Source"
+/I "C:\My Visual Studio Projects\Unreal Engine Game\Github\AdventureGame\AdventureGame\Source\AdventureGame\Public"
 /I "..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT"
 /I "..\Plugins\EnhancedInput\Source"
 /I "..\Plugins\EnhancedInput\Source\EnhancedInput\Public"
