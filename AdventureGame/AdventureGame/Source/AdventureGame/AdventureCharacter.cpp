@@ -40,7 +40,7 @@ void AAdventureCharacter::BeginPlay()
 	//GetMesh()->SetOwnerNoSee(true);
 
 	// Position the camera slightly above the eyes.
-	FirstPersonCameraComponent->SetRelativeLocation(FVector(25.0f, -150.9f, 0.0f));//FVector(2.8f, 5.9f, 0.0f));
+	FirstPersonCameraComponent->SetRelativeLocation(FVector(0.0f, -150.9f, 180.0f));//(FVector(0.0f, -150.9f, 180.0f));
 
 	// Get the player controller for this character
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))

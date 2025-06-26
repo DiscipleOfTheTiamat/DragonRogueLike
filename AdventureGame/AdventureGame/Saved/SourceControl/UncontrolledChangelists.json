@@ -15,7 +15,6 @@
 				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/R1/TS5OQ5CRUWFZYL1ZQ7I416.uasset",
 				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/6/J7/N10XDC9G27EMLS5AGZ6AVV.uasset",
 				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalObjects__/ThirdPerson/Maps/ThirdPersonMap/4/VW/TY7TSUER9KKGHX2BMKSL0L.uasset",
-				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/D/DE/SWSI13675DVYIZ0N4NF7Y3.uasset",
 				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalObjects__/ThirdPerson/Maps/ThirdPersonMap/6/TK/PIQ0B2FNWR15P52TECP27A.uasset",
 				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/1/AZ/A7GPT109Y6ZTTJD4A7TXER.uasset",
 				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/4/LN/30UBDLYFFA5ZR7U4W4L4GG.uasset",
@@ -56,7 +55,11 @@
 				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/E/FR/LBG6LPN5JCL3FMVSI2CK6R.uasset",
 				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/ThirdPerson/Blueprints/BP_AdventureCharacter.uasset",
 				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/ThirdPerson/Input/IMC_Adventure.uasset",
-				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset"
+				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/ThirdPerson/Blueprints/BP_DrgnCharacter.uasset",
+				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/TX/B0V7ELZ1LH07U85YO9YD29.uasset",
+				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/7/MK/WGGFUMDK3XPAZVQQLV6PJ2.uasset",
+				"C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/D/DE/SWSI13675DVYIZ0N4NF7Y3.uasset"
 			]
 		}
 	]

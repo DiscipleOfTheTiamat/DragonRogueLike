@@ -54,5 +54,17 @@
     <ClCompile Include="..\..\Source\AdventureGame\AdventureGameMode.h">
       <Filter>Source\AdventureGame</Filter>
     </ClCompile>
+    <Filter Include="Source\AdventureGame\Private">
+      <UniqueIdentifier>{F968E8BE-DBC9-3F8F-AD1E-DB0383310D8E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\AdventureGame\Private\DrgnCharacter.cpp">
+      <Filter>Source\AdventureGame\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\AdventureGame\Public">
+      <UniqueIdentifier>{01E7BD1F-0942-3E0F-A115-12C857EA8956}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\AdventureGame\Public\DrgnCharacter.h">
+      <Filter>Source\AdventureGame\Public</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
