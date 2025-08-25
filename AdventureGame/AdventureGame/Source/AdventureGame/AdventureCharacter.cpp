@@ -70,14 +70,15 @@ void AAdventureCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
 	{
 		// Bind Movement Actions
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAdventureCharacter::Move);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAdventureCharacter::Move2);//AAdventureCharacter
 
 		// Bind Jump Actions
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
-		
+		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);//ACharacter
+		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);//ACharacter
+
+		//APawn//
 		// Bind Look Actions
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AAdventureCharacter::Look);
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AAdventureCharacter::Look);//AAdventureCharacter
 	}
 }
 void AAdventureCharacter::Move(const FInputActionValue& Value)
@@ -99,7 +100,25 @@ void AAdventureCharacter::Look(const FInputActionValue& Value)
 	const FVector2D LookAxisValue = Value.Get<FVector2D>();
 	if (Controller)
 	{
-		AddControllerYawInput(LookAxisValue.X);
-		AddControllerPitchInput(LookAxisValue.Y);
+		APawn::AddControllerYawInput(LookAxisValue.X);
+		APawn::AddControllerPitchInput(LookAxisValue.Y);
+		//AddControllerYawInput(LookAxisValue.X);
+		//AddControllerPitchInput(LookAxisValue.Y);
 	}
+}
+void AAdventureCharacter::Move2(const FInputActionInstance& Instance)
+{
+	FRotator ControlRot = GetControlRotation();
+	ControlRot.Pitch = 0.0f;
+	ControlRot.Roll = 0.0f;
+
+	// Get value from input (combined value from WASD keys or single Gamepad stick) and convert to Vector (x,y)
+	const FVector2D AxisValue = Instance.GetValue().Get<FVector2D>();
+
+	// Move forward/back
+	AddMovementInput(ControlRot.Vector(), AxisValue.Y);
+
+	// Move Right/Left strafe
+	const FVector RightVector = ControlRot.RotateVector(FVector::RightVector);
+	AddMovementInput(RightVector, AxisValue.X);
 }

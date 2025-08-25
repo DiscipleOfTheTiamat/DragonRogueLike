@@ -3,7 +3,84 @@
     "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
     "runs": [
         {
-            "results": [],
+            "results": [
+                {
+                    "ruleId": "C4263",
+                    "message": {
+                        "text": "void ADrgnCharacter::Jump(float): функция-член не переопределяет ни одной виртуальной функции-члена базового класса"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/DrgnCharacter.gen.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Source/AdventureGame/Public/DrgnCharacter.h"
+                                },
+                                "region": {
+                                    "startLine": 43,
+                                    "startColumn": 7
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4264",
+                    "message": {
+                        "text": "void ACharacter::Jump(void): нет доступного переопределения для виртуальной функции-члена из базового класса \"ACharacter\"; функция скрыта"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/DrgnCharacter.gen.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/My Visual Studio Projects/Unreal Engine Game/Github/AdventureGame/AdventureGame/Source/AdventureGame/Public/DrgnCharacter.h"
+                                },
+                                "region": {
+                                    "startLine": 18,
+                                    "startColumn": 25
+                                }
+                            }
+                        }
+                    ],
+                    "relatedLocations": [
+                        {
+                            "id": 0,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h"
+                                },
+                                "region": {
+                                    "startLine": 692,
+                                    "startColumn": 26
+                                }
+                            },
+                            "message": {
+                                "text": " см. объявление \"ACharacter::Jump\""
+                            }
+                        },
+                        {
+                            "id": 1,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h"
+                                },
+                                "region": {
+                                    "startLine": 241,
+                                    "startColumn": 7
+                                }
+                            },
+                            "message": {
+                                "text": " см. объявление \"ACharacter\""
+                            }
+                        }
+                    ]
+                }
+            ],
             "tool": {
                 "driver": {
                     "name": "MSVC",

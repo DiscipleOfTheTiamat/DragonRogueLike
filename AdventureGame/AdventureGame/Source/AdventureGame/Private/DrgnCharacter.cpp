@@ -5,7 +5,10 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-
+#include "C:\Program Files\Epic Games\UE_5.5\Engine\Plugins\EnhancedInput\Source\EnhancedInput\Public\EnhancedInputComponent.h" //Engine/Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputComponent.h
+#include "C:\Program Files\Epic Games\UE_5.5\Engine\Plugins\EnhancedInput\Source\EnhancedInput\Public\EnhancedInputSubsystems.h" 
+#include "C:\Program Files\Epic Games\UE_5.5\Engine\Plugins\EnhancedInput\Source\EnhancedInput\Public\InputActionValue.h"
+#include "C:\Program Files\Epic Games\UE_5.5\Engine\Plugins\EnhancedInput\Source\EnhancedInput\Public\InputAction.h"
 // Sets default values
 ADrgnCharacter::ADrgnCharacter()
 {
@@ -52,6 +55,7 @@ void ADrgnCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 
+
 	PlayerInputComponent->BindAction("PrimaryAttack", IE_Pressed, this, &ADrgnCharacter::PrimaryAttack);
 }
 
@@ -64,6 +68,11 @@ void ADrgnCharacter::MoveRight(float Value)
 	FVector RightVector = FRotationMatrix(ControlRot).GetScaledAxis(EAxis::Y); // FRotationMatrix(InRot).GetScaledAxis(EAxis::Y);
 
 	AddMovementInput(RightVector, Value);
+}
+
+void ADrgnCharacter::Jump(float Value) 
+{
+
 }
 
 void ADrgnCharacter::MoveForward(float Value)
