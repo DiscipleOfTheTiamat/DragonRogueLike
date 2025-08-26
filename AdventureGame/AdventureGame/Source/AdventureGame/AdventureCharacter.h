@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/Actor.h"
 #include "C:\Program Files\Epic Games\UE_5.5\Engine\Plugins\EnhancedInput\Source\EnhancedInput\Public\EnhancedInputComponent.h" //Engine/Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputComponent.h
 #include "C:\Program Files\Epic Games\UE_5.5\Engine\Plugins\EnhancedInput\Source\EnhancedInput\Public\EnhancedInputSubsystems.h" 
 #include "C:\Program Files\Epic Games\UE_5.5\Engine\Plugins\EnhancedInput\Source\EnhancedInput\Public\InputActionValue.h"
@@ -14,6 +15,8 @@
 class UInputMappingContext;
 class UInputAction;
 class UInputComponent;
+class UCameraComponent;
+class USpringArmComponent;
 
 UCLASS()
 class ADVENTUREGAME_API AAdventureCharacter : public ACharacter
@@ -27,6 +30,12 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(VisibleAnywhere)
+	USpringArmComponent* SpringArmComp;
+
+	UPROPERTY(VisibleAnywhere)
+	UCameraComponent* CameraComp;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
 	UInputMappingContext* FirstPersonContext;

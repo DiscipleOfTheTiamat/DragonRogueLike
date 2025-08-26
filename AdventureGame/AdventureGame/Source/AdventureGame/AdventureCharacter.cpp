@@ -2,10 +2,13 @@
 
 
 #include "AdventureCharacter.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "Camera/CameraComponent.h"
 
 // Sets default values
 AAdventureCharacter::AAdventureCharacter()
-{
+{/*
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -24,7 +27,27 @@ AAdventureCharacter::AAdventureCharacter()
 	FirstPersonCameraComponent->SetupAttachment(FirstPersonMeshComponent, FName("Head"));
 
 	// Enable the pawn to control camera rotation.
-	FirstPersonCameraComponent->bUsePawnControlRotation = true;
+
+	//FirstPersonCameraComponent->bUsePawnControlRotation = false;
+
+
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+
+	bUseControllerRotationYaw = false;*/
+	PrimaryActorTick.bCanEverTick = true;
+
+	PrimaryActorTick.bCanEverTick = true;
+
+	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>("SpringArmComp");
+	SpringArmComp->SetupAttachment(RootComponent);
+	SpringArmComp->bUsePawnControlRotation = true;
+
+	CameraComp = CreateDefaultSubobject<UCameraComponent>("CameraComp");
+	CameraComp->SetupAttachment(SpringArmComp);
+
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+
+	bUseControllerRotationYaw = false;
 }
 
 // Called when the game starts or when spawned
@@ -118,7 +141,8 @@ void AAdventureCharacter::Move2(const FInputActionInstance& Instance)
 	// Move forward/back
 	AddMovementInput(ControlRot.Vector(), AxisValue.Y);
 
+
 	// Move Right/Left strafe
-	const FVector RightVector = ControlRot.RotateVector(FVector::RightVector);
+	const FVector RightVector = ControlRot.RotateVector(FVector::RightVector);//FRotationMatrix(ControlRot).GetScaledAxis(EAxis::Y);;//
 	AddMovementInput(RightVector, AxisValue.X);
 }

@@ -52,8 +52,8 @@ void ADrgnCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis("MoveForward", this, &ADrgnCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ADrgnCharacter::MoveRight);
 
-	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
-	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	PlayerInputComponent->BindAxis("Turn", this, &ADrgnCharacter::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("LookUp", this, &ADrgnCharacter::AddControllerPitchInput);
 
 
 	PlayerInputComponent->BindAction("PrimaryAttack", IE_Pressed, this, &ADrgnCharacter::PrimaryAttack);
